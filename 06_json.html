@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON JavaScript Object Notation</title>
+</head>
+
+<body>
+  <h1>JSON JavaScript Object Notation</h1>
+  <script>
+    /* **********     Curso JavaScript: 59. JSON - #jonmircha     ********** */
+    /* https://www.json.org/json-es.html */
+    /* https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON */
+    const json = {
+      cadena: "Jon",
+      numero: 35,
+      booleano: true,
+      arreglo: ["correr", "programar", "cocinar"],
+      objeto: {
+        twitter: "@jonmircha",
+        email: "jonmircha@gmail.com"
+      },
+      nulo: null
+    }
+
+    console.log(json);
+
+    console.log(JSON);
+
+    console.log("*** JSON.parse ***");
+    console.log(JSON.parse("{}"));
+    console.log(JSON.parse("[1,2,3]"));
+    console.log(JSON.parse("true"));
+    console.log(JSON.parse("false"));
+    console.log(JSON.parse("19"));
+    console.log(JSON.parse('"Hola Mundo"'));
+    console.log(JSON.parse("null"));
+    //console.log(JSON.parse("undefined"));
+    console.log(JSON.parse('{ "x": 2, "y": 3 }'));
+
+    /* 
+    JSON.parse() es un método en JavaScript que se utiliza para convertir una cadena JSON en un objeto JavaScript. 
+    La sintaxis básica es la siguiente:
+    un ejemplo 
+    const jsonText = '{"nombre": "Juan", "edad": 30}';
+    const objeto = JSON.parse(jsonText);
+
+    console.log(objeto.nombre); // Imprime: Juan
+    console.log(objeto.edad);   // Imprime: 30 */
+
+    console.log("*** JSON.stringify ***");
+    //El método JSON.stringify() toma un objeto JavaScript y lo convierte en una cadena JSON.
+    console.log(JSON.stringify({}));
+    console.log(JSON.stringify([1, 2, 3]));
+    console.log(JSON.stringify(true));
+    console.log(JSON.stringify(false));
+    console.log(JSON.stringify(19));
+    console.log(JSON.stringify("Hola Mundo"));
+    console.log(JSON.stringify(null));
+    console.log(JSON.stringify(undefined));
+    console.log(JSON.stringify({ x: 2, y: 3 }));
+
+    console.log("*** Ejemplo JSON ***");
+    console.log(JSON.stringify(json));
+    console.log(JSON.parse('{"cadena": "Jon","numero": 35, "booleano": true,"arreglo": ["correr","programar","cocinar"],"objeto": {"twitter": "@jonmircha","email": "jonmircha@gmail.com"},"nulo": null}'));
+  
+   
+   
+/*  Cuando utilizas response.json(), estás haciendo una solicitud a un servidor y esperando que devuelva 
+datos en formato JSON. Este método de response indica al navegador que deseas leer el cuerpo de la respuesta como JSON.
+
+Si el servidor responde con datos en formato JSON, response.json() automáticamente analizará esos datos y 
+los devolverá como un objeto JavaScript. No necesitas modificar manualmente los datos; el método json() se
+encarga de eso por ti.
+
+Por ejemplo:
+
+javascript
+
+const response = await fetch('https://api.example.com/data');
+const data = await response.json();
+console.log(data); // Aquí data es un objeto JavaScript con los datos obtenidos del servidor en formato JSON.
+En este ejemplo, response.json() toma los datos devueltos por el servidor en formato JSON y los convierte en 
+un objeto JavaScript para que puedas manipularlos fácilmente en tu código. */
+
+/* try {
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newRestaurant),
+      };
+
+     // JSON.stringify() toma un objeto JavaScript y lo convierte en una cadena JSON. 
+    } */
+  </script>
+</body>
+
+</html>

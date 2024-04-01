@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Programación en JavaScript</title>
+</head>
+
+<body>
+  <h1>Ejercicios de Programación en JavaScript</h1>
+  
+  <script>
+    /* 1) Programa una función que cuente el número de caracteres de una cadena de texto,
+     pe. miFunción("Hola Mundo") devolverá 10 */
+
+     /*function miFuncion(cadenaTexto= "") {
+          if(cadenaTexto !== ""){
+            const texto = new String (cadenaTexto);
+            console.log(`La cadena ${cadenaTexto} tiene ${texto.length} caracteres`);
+          }else{
+            console.log("DEBES INGRESAR UNA CADENA DE TEXTO!!")
+
+          }
+        
+      }*/
+      /* Operador Ternario (condición) ? verdadero : falsa */
+      /* const miFuncion=(cadenaTexto="")=>
+      (!cadenaTexto)?console.log("DEBES INGRESAR UNA CADENA DE TEXTO!!"):
+      (
+      texto = new String (cadenaTexto),
+      console.log(`La cadena ${texto} tiene ${texto.length} caracteres`)
+      )
+    
+
+        miFuncion("Hola Mundo");
+        miFuncion(999554845555555);
+        miFuncion(true);
+        miFuncion(); */
+
+    /* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados,
+     pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+
+   /*  function recortarTexto(texto= "Debes Ingresar una cadena de texto! y longitud", longitud=50) {
+    // Verifica si la longitud del texto es mayor que el valor indicado
+    if (texto.length > longitud) {
+        // Utiliza el método slice() para recortar el texto hasta la longitud deseada
+        return texto.slice(0, longitud);
+    } else {
+        // Si la longitud del texto es igual o menor que el valor indicado, devuelve el texto sin cambios
+        return texto;
+    }
+}*/
+
+/* const recortarTexto2 = (cadena ="", longitud = undefined)=>
+(!cadena) ?
+console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!")
+:
+console.info(cadena.slice(0,longitud));
+
+recortarTexto2("hola mundo querido",15);
+
+
+
+
+
+// Ejemplo de uso:
+console.log(recortarTexto2("Hola Mundo", 8)); // Output: "Hola"
+console.log(recortarTexto2("esto es una prueba del ejercicio dos donde creamos un if  para validar el tamaño y comparar con la longitus", 10)); // Output: "Hola"
+console.log(recortarTexto2());
+ */
+
+
+/* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
+     miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+
+
+/*      const devuelve = (cadenaTexto = "Debes Ingresar una cadena de texto!")=>{
+            const array = cadenaTexto.split(" "); // divide en un arreglo la cadena de texto hasta que encuentre lo que va en split(" ") para este ejemplo un espacio pero puede ser coma etc
+            return array;
+
+     };
+
+     console.log(devuelve("hola mundo como estas? ya llego Axel mi Hijo"));
+     console.log(devuelve());
+
+
+    //solución 2
+
+    const devuelve2 =(cadena="",separador=undefined)=>
+    (!cadena)?
+      console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!")
+      :(separador === undefined)
+      ?console.warn("no ingresaste el caracter separador")
+      :console.info(cadena.split(separador));
+
+    console.log(devuelve2("hola mundo como estas? ya llego Axel mi Hijo")," ");
+    console.log(devuelve2("hola mundo estoy separando por , me , pue, des reviar,", ","));
+    console.log(devuelve2());
+
+
+    /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
+
+ /* const repite = (cadenaTexto  = "Debes Ingresar una cadena de texto! y/o numero de veces", nveces=1) =>{
+    let resultado = "";
+      for(i=0;i<nveces;i++){
+        resultado += cadenaTexto + (" ");
+             
+      }
+      return resultado;
+
+ }
+
+ console.log(repite("hola mundo", 10));
+ console.log(repite()); */
+
+
+/*
+ //otra forma: 
+ function repetirTexto(cadena= "", repeticiones=undefined) {
+   
+    (!cadena)?
+    console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!") 
+    :repeticiones === undefined?
+      console.warn("DEBES INGRESAR numero de repeticiones!!")
+    :(
+      () => {
+            let resultado = '';
+            for (let i = 0; i < repeticiones; i++) {
+                resultado += cadena + ' ';
+            }
+            console.info(resultado.trim()); // Elimina el espacio en blanco extra al final
+        })();//se auto llama
+}
+
+console.log(repetirTexto('Hola Mundo', 50)); // Output: Hola Mundo Hola Mundo Hola Mundo
+console.log(repetirTexto());*/
+
+
+
+    /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") 
+    devolverá "odnuM aloH" */
+
+/*     const invertiTexto =(cadena="")=>{
+    (!cadena)?
+    console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!") 
+    : console.info(cadena.split("").reverse().join(""));
+    }
+
+    invertiTexto("Hola MUndo");
+    invertiTexto(); */
+
+
+
+    /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo,
+     pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
+
+
+   /*  const contarPalabra = (cadena="", palabra="") => {
+    if(!cadena){
+    console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!")  
+    }else if(!palabra){
+      console.warn("DEBES INGRESAR UNA PALABRA")  
+    }else{
+    // Utilizamos una expresión regular con la opción 'g' para hacer coincidir todas las ocurrencias de la palabra
+    const regex = new RegExp("\\b" + palabra + "\\b", "gi");// Creamos una expresión regular utilizando RegExp, donde \\b indica un límite de palabra para evitar coincidencias parciales.
+    //La opción gi indica que la búsqueda debe ser insensible a mayúsculas y minúsculas (i) y global (g).
+    // Utilizamos el método match() para encontrar todas las coincidencias
+    const coincidencias = cadena.match(regex); //Utilizamos el método match() para encontrar todas las coincidencias de la palabra en el texto utilizando la expresión regular. crea un array
+    //fuente: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match
+
+    // Si no se encontraron coincidencias, devolvemos 0
+    if (!coincidencias) {
+        return 0;
+    }
+    // Devolvemos la longitud del array de coincidencias, que representa el número de veces que se repite la palabra
+    return console.log(`La palabra ${palabra} se repite ${coincidencias.length}`);
+     }
+}
+
+console.log(contarPalabra("hola mundo adios mundo mundo", "mundo")); // Output: 2 */
+
+
+
+    /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo
+     (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
+
+/*      const palindromo = (cadena="") => {
+    (!cadena)?
+    console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!") 
+    : 
+    cadena = cadena.toLowerCase();
+    reversa = cadena.split("").reverse().join("");
+    if(reversa === cadena){
+      console.info(`La palabra ${cadena} es Palíndromo ya que la en el otro sentido es igual ${reversa}`);
+    }else{
+      console.warn("No es Palíndromo!!")
+    }
+
+     }
+
+      
+      palindromo("salas");
+      palindromo("sala");
+      palindromo("arenera"); */
+
+
+
+
+    /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, 
+    pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
+
+    const eliminarCaracteres=(texto="", patron="")=>{
+      (!texto)?
+      console.warn("DEBES INGRESAR UNA CADENA DE TEXTO!!") 
+      :(!patron)?
+        console.warn("DEBES INGRESAR UN PATRON A ELIMINAR!!") 
+        :console.info(texto.replace(new RegExp(patron,'ig'),""));
+        };
+
+      eliminarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz");
+
+    /* 9) Programa una función que obtenga un numero aleatorio entre 501 y 600 */
+
+       const  numeroAleatorio = (min, max) => {
+        console.info(`El número aleatorio va estar entre ${min} y ${max}`)
+        return Math.round(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Genera un número aleatorio entre 501 y 600
+    console.log(numeroAleatorio(501, 600));
+
+    // Genera un número aleatorio entre -5 y 5
+    console.log(numeroAleatorio(-5, 5));
+
+
+
+    /* 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true  */
+
+
+
+    /* 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120 */
+
+
+
+    /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true */
+
+
+
+    /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
+
+
+
+    /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
+
+
+
+    /* 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10 */
+
+
+
+    /* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800 */
+
+
+
+    /* 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020) */
+
+
+
+    /* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5 */
+
+
+
+    /* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero */
+
+
+
+    /* 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero */
+
+
+
+    /* 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25] */
+
+
+
+    /* 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60] */
+
+
+
+    /* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]} */
+
+
+
+    /* 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }*/
+
+
+
+    /* 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]  */
+
+
+
+    /* 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5 */
+
+
+
+    /* 27) Programa una clase llamada Pelicula.
+        La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+          - Todos los datos del objeto son obligatorios.
+          - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
+          - Valida que el título no rebase los 100 caracteres.
+          - Valida que el director no rebase los 50 caracteres.
+          - Valida que el año de estreno sea un número entero de 4 dígitos.
+          - Valida que el país o paises sea introducidos en forma de arreglo.
+          - Valida que los géneros sean introducidos en forma de arreglo.
+          - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
+          - Crea un método estático que devuelva los géneros aceptados*.
+          - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+          - Crea un método que devuelva toda la ficha técnica de la película.
+          - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
+
+        * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
+        */
+  </script>
+</body>
+
+</html>
