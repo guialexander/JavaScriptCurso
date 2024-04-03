@@ -22,7 +22,7 @@
         $fragment.appendChild($li);
       });
 
-      $xhr.appendChild($fragment);
+      $xhr.appendChild($fragment);// innserta todo con esta linea 
     } else {
       //console.log("error");
       let message = xhr.statusText || "Ocurrió un error";
