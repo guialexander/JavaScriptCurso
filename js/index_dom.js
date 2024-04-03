@@ -4,6 +4,7 @@ import hamburguerMenu from "./dom/menu_hamburguesa.js";
 import {digitalClock, alarm}  from "./dom/reloj.js";
 import { moveBall, shortcuts } from "./dom/teclado.js";
 import countdown from "./dom/cuenta_regresiva.js";
+import scrollTopButton from "./dom/boton_scroll.js";
 
 
 
@@ -17,6 +18,7 @@ d.addEventListener("DOMContentLoaded", e=>{
         "countdown",
         "Jun 20, 2024 19:30:00",
         "Pitazo de la Copa America 2024!!!!⚽⚽⚽⚽⚽😀");
+    scrollTopButton(".scroll-top-btn");
 });
 
 d.addEventListener("keydown", e =>{

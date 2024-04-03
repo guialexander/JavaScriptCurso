@@ -14,7 +14,7 @@ export default function countdown(id, limitDate, finalMessage){
             
 
 
-        $countdown.innerHTML = `<h3>Faltan: ${days} Días ${hours} horas ${minutes} Minutos ${seconds} Segundos </h3>`;
+        $countdown.innerHTML = `<h3> Faltan: ${days} Días ${hours} horas ${minutes} Minutos ${seconds} Segundos <br>  Para la Copa America 2024 ⚽⚽⚽⚽⚽😀</h3>`;
         
         
         if(limitTime < 0){
