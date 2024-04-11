@@ -7,13 +7,14 @@
   --main-modal-color: rgba(247, 222, 30, 0.85);
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
+  --filter-found-color: #ffff;
 }
 
 html {
   box-sizing: border-box;
   font-family: var(--main-font);
   font-size: var(--font-size);
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth; /* Cuando se establece en smooth, los desplazamientos dentro de la página se realizan de forma suave y animada  */
 }
 
 *,
@@ -76,9 +77,9 @@ video {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: auto;/*para poder bajar en el menú*/
   background-color: var(--second-modal-color);
   opacity: 0;
   visibility: hidden;
@@ -98,7 +99,6 @@ video {
   opacity: 1;
   visibility: visible;
 }
-
 .panel-btn {
   position: fixed;
   z-index: 999;
@@ -113,6 +113,7 @@ video {
   align-items: center;
   background-color: var(--main-color);
 }
+
 
 .menu {
   width: inherit;
@@ -192,7 +193,7 @@ video {
   left: 1vw;
   width: 4rem;
   height: 4rem;
-  border-radius: 50%;
+  border-radius: 50%; /* volver el btn redondo */
   font-size: 2rem;
   font-weight: bold;
   background-color: var(--main-color);
@@ -239,11 +240,12 @@ video {
 
 .card {
   background-color: var(--second-color);
-  color: var(--main-color);
+  color: var(--filter-found-color);
   transition: all 0.3s ease-out;
 }
 
 .card img {
+
   width: 100%;
   height: auto;
 }
@@ -254,7 +256,7 @@ video {
 
 .filter {
   /* display: none; */
-  visibility: hidden;
+  visibility: hidden;/* //oculta y ordena position one */
   opacity: 0;
   order: 1;
 }
@@ -284,11 +286,11 @@ video {
   transition: opacity 1s ease;
 }
 
-.slider-slide img {
+.slider-slide img {/* ajustar la posicion de la imagen */
   height: inherit;
   width: inherit;
-  object-fit: cover;
-  object-position: 50% 0%;
+  object-fit: cover;/* estilo de imagen de portada que es response y ajusta el contenedor ajusta al ancho*/
+  object-position: 50% 0%; /* primer valor x segundo el y*/
 }
 
 .slider-slide.active {
@@ -296,7 +298,7 @@ video {
   visibility: visible;
 }
 
-.slider-btns {
+.slider-btns { /* https://youtu.be/mj-AoCeA1ns?list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&t=1383 */
   position: absolute;
   width: 100%;
   top: calc(50% - 2rem);
