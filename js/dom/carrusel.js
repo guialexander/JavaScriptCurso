@@ -4,7 +4,7 @@ export default function slider() {
         $prevBtn = d.querySelector(".slider-btns .prev"),
         $slides = d.querySelectorAll(".slider-slide");
 
-        console.log($prevBtn)
+        //console.log($prevBtn)
 
     let i = 0; 
  d.addEventListener("click",(e)=>{

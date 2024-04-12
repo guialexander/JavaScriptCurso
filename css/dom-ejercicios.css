@@ -8,6 +8,7 @@
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
   --filter-found-color: #ffff;
+  --backcolor-menu-hamburger: rgb(217, 255, 0);
 }
 
 html {
@@ -80,7 +81,7 @@ video {
   justify-content: space-between;
   align-items: center;
   overflow-y: auto;/*para poder bajar en el menú*/
-  background-color: var(--second-modal-color);
+  background-color: var(--backcolor-menu-hamburger);
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease, opacity 0.5s ease;
@@ -136,8 +137,8 @@ video {
 
 .menu a:hover {
   font-weight: bold;
-  color: var(--second-color);
-  background-color: var(--main-modal-color);
+  color: white;
+  background-color: var(--main-color);
 }
 
 /* **********     Eventos del Teclado     ********** */
@@ -349,11 +350,12 @@ video {
     position: sticky;
     top: 4rem;
     justify-content: flex-start;
-    background-color: var(--second-color);
+    background-color:rgb(217, 255, 0);
     transform: translate(0, 0);
     opacity: 1;
     visibility: visible;
     overflow-y: auto;
+    height: 100vh;
   }
 
   .panel-btn {
@@ -372,7 +374,7 @@ video {
 
   .menu a:hover,
   .menu a.active {
-    color: var(--second-color);
+    color:white;
     background-color: var(--main-color);
   }
 
@@ -380,6 +382,10 @@ video {
     right: initial;
     left: calc(4.25rem + 1vw);
   }
+
+/*   .section{
+    border:thin solid #b71c1c;
+  } */
 }
 
 /* **********     ContactForm Validations     ********** */
